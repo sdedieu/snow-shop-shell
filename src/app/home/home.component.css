@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .shell-row {
+    @apply flex flex-row items-stretch justify-between;
+  }
+  .shell-row.sales {
+    @apply h-60 bg-green-special;
+  }
+  .shell-row.sports {
+    @apply h-screen;
+  }
+  .shell-row .sales-text {
+    @apply flex-1 flex rounded-md flex-col bg-green-special items-center text-white transform -skew-x-6;
+  }
+  .shell-row .sales-text .sales-text--items {
+    @apply flex-1 flex flex-col items-center justify-center;
+  }
+  .shell-row .sales-image {
+    @apply flex-1 flex rounded-md flex-col items-center justify-center text-white bg-sales-image bg-100 bg-no-repeat bg-center transform -skew-x-6;
+  }
+  .shell-row .sales-enter-text {
+    @apply flex items-center opacity-0 justify-center border tracking-widest rounded-md px-2 py-1 text-2xl font-black;
+  }
+  .shell-row:hover .sales-enter-text {
+    @apply opacity-100;
+  }
+  .shell-row:hover .sports-col {
+    @apply opacity-30;
+  }
+  .shell-row .sports-col {
+    @apply flex-1 rounded-md text-center bg-cover bg-no-repeat m-8 bg-center hover:opacity-100 transform -skew-x-6 hover:scale-110 hover:-skew-x-6;
+  }
+  .shell-row .cross-country-image {
+    @apply bg-cross-country-image;
+  }
+  .shell-row .downhill-image {
+    @apply bg-downhill-image;
+  }
+  .shell-row .snowboard-image {
+    @apply bg-snowboard-image;
+  }
+  .shell-row .sports-col {
+    @apply flex flex-col;
+  }
+
+  .card {
+    @apply w-full h-96 rounded-md bg-white relative flex shadow-md transition duration-700 ease-out;
+  }
+
+  .card:before {
+    @apply absolute top-0 left-0 block w-full h-full rounded-md z-10 transition duration-700 opacity-0;
+  }
+
+  .card .sales-image img {
+    @apply w-full h-full object-cover absolute top-0 left-0 rounded-md;
+  }
+
+  .card .info {
+    @apply absolute top-2/4 left-2/4 z-20 text-white opacity-0 translate-y-3 transition duration-700;
+  }
+
+  .card:hover .info {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .card:hover:before {
+    @apply opacity-100;
+  }
+
+  .info button:hover {
+    @apply text-white bg-green-special;
+  }
+
+  .info button {
+    @apply p-0.5 border rounded-md px-2 py-1 text-white text-xl font-black cursor-pointer transition duration-700 ease-linear transform -skew-x-6;
+  }
+}
+
+.card:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+}
