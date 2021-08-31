@@ -1,4 +1,4 @@
-<div class="shell-row sales card">
+<div [routerLink]="['/sales']" class="shell-row sales card">
     <div class="sales-text">
         <div class="sales-text--items"><span class="border rounded-md px-2 py-1 text-2xl font-black">sales</span></div>
         <hr class="w-10 border-2 rounded-md">
@@ -17,14 +17,14 @@
     </div>
 </div>
 <div class="shell-row sports">
-    <div class="sports-col cross-country-image">
+    <div [routerLink]="['/cross-country']"  class="sports-col cross-country-image">
         <span class="mt-12 mx-auto">
             <div class="info">
                 <button>Cross country</button>
             </div>
         </span>
     </div>
-    <div class="sports-col downhill-image">
+    <div [routerLink]="['/downhill']"  class="sports-col downhill-image">
         <span class="mt-12 mx-auto">
             <div class="info">
                 <button>Downhill</button>
