@@ -13,6 +13,6 @@
     @apply text-left
   }
   .footer {
-    @apply flex flex-row justify-between bg-black h-40 text-white items-center px-8
+    @apply flex flex-row justify-between bg-black h-40 text-white items-center px-8 mt-2;
   }
 }
