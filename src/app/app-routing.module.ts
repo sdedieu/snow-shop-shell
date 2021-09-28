@@ -6,14 +6,6 @@ import { WrapperComponent } from './utils/wrapper/wrapper.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
-  {path: 'snowboard', 
-  component: WrapperComponent,
-  data: {
-    remoteName: 'snowboard',
-    remoteEntry: 'http://localhost:4204/remoteEntry.js',
-    exposedModule: './SnowBoardModule',
-    elementName: 'snowboard-page-element'
-  }},
   {path: '', pathMatch: 'full', redirectTo: 'home'}
 ];
 
@@ -22,3 +14,15 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
+/*
+{path: 'snowboard', 
+  component: WrapperComponent,
+  data: {
+    remoteName: 'snowboard',
+    remoteEntry: 'http://localhost:4204/remoteEntry.js',
+    exposedModule: './SnowBoardModule',
+    elementName: 'snowboard-page-element'
+  }},
+*/
