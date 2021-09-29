@@ -15,4 +15,9 @@
   .footer {
     @apply flex flex-row justify-between bg-black h-40 text-white items-center px-8 mt-2;
   }
+  ::ng-deep .header-logo > img {
+    @apply h-20 !important;
+  }
 }
+
+
