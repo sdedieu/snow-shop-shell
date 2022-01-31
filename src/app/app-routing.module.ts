@@ -19,7 +19,7 @@ const routes: Routes = [
         remoteEntry: 'http://localhost:4202/remoteEntry.js',
         exposedModule: './module'
     }),
-      elementName: 'cross-country-page-element'
+      elementName: 'cross-country-web-component'
     }
   },
   {
@@ -31,7 +31,7 @@ const routes: Routes = [
         remoteEntry: 'http://localhost:4203/remoteEntry.js',
         exposedModule: './module'
     }),
-      elementName: 'downhill-page-element'
+      elementName: 'downhill-web-component'
     }
   },
   {
@@ -43,7 +43,7 @@ const routes: Routes = [
         remoteEntry: 'http://localhost:4204/remoteEntry.js',
         exposedModule: './module'
     }),
-      elementName: 'snowboard-page-element'
+      elementName: 'snowboard-web-component'
     }
   }
   */
