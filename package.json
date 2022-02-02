@@ -21,6 +21,7 @@
     "autoprefixer": "^10.3.1",
     "postcss": "^8.3.5",
     "rxjs": "~6.6.0",
+    "snow-shop-lib": "0.0.1",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"
   },

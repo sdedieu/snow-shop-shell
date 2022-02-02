@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EMPTY, Observable } from 'rxjs';
+import { SnowShopLibService } from 'snow-shop-lib';
 
 @Component({
   selector: 'shell-header',
@@ -10,9 +11,10 @@ export class HeaderComponent implements OnInit {
   
   cartItemsCount$: Observable<number> = EMPTY;
 
-  constructor() { }
+  constructor(private snowShopLibService: SnowShopLibService) { }
 
   ngOnInit(): void {
+    this.cartItemsCount$ = this.snowShopLibService.getCartItemCount();
   }
 
 }
