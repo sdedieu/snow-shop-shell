@@ -1,4 +1,7 @@
-module.exports = {
+module.exports = {  
+  content: [
+  "./src/**/*.{html,ts}",
+],
   theme: {
     extend: {
       backgroundSize: (theme) => ({

@@ -9,9 +9,9 @@ export class WrapperComponent implements AfterContentInit {
     constructor(private route: ActivatedRoute) { }
     async ngAfterContentInit(): Promise<void> {
         const elementName = this.route.snapshot.data['elementName'];
-        const loader = this.route.snapshot.data['loadChildren'];
+        const loadChildren = this.route.snapshot.data['loadChildren'];
+        await loadChildren();
 
-        await loader();
         const element = document.createElement(elementName);
         this.vc.nativeElement.appendChild(element);
     }
