@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { EMPTY, Observable } from 'rxjs';
+import { EMPTY, fromEvent, Observable } from 'rxjs';
 import { SnowShopLibService } from 'snow-shop-lib';
+import { map, scan } from 'rxjs/operators';
 
 @Component({
   selector: 'shell-header',
@@ -11,7 +12,11 @@ export class HeaderComponent implements OnInit {
   
   cartItemsCount$: Observable<number> = EMPTY;
 
-  constructor(private snowShopLibService: SnowShopLibService) { }
+  increment$: Observable<CustomEvent> = EMPTY;
+
+  constructor(private snowShopLibService: SnowShopLibService) {
+    this.increment$ = fromEvent<CustomEvent<{by:number}>>(window, 'increment');
+   }
 
   ngOnInit(): void {
     this.cartItemsCount$ = this.snowShopLibService.getCartItemCount();
